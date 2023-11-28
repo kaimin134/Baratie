@@ -213,3 +213,34 @@ header .shopping span {
 .listCart .count {
   margin: 0 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  nav {
+    width: 500px;
+  }
+
+  a {
+    padding: 10px; /* Reduce padding for smaller screens */
+    top: 20px; /* Adjust top spacing */
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+
+  .nav-links {
+    padding: 5px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .container {
+    width: 500px;
+  }
+
+  .list {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    margin-top: 20px; /* Adjust top margin */
+  }
+}
