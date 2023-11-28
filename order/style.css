@@ -1,0 +1,214 @@
+body {
+  background-color: #e3e7e8;
+  font-family: system-ui;
+}
+
+nav {
+  height: 50px;
+  width: 500px;
+  margin: 30px auto;
+  background-color: #00bf63;
+  border-radius: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+}
+nav img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  left: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo img {
+  width: 25px;
+  height: 25px;
+}
+.logo a {
+  color: white;
+  font-family: "Edu TAS Beginner", cursive;
+  font-size: 30px;
+  transform: translate(-10%, -15%);
+}
+
+.nav-links {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  position: relative;
+  top: 15px;
+}
+
+a:hover {
+  color: rgb(217, 255, 46);
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#searchInput {
+  padding: 10px;
+  border-right: none;
+  border-color: #00bf63;
+  border-radius: 20px 0 0 20px;
+  width: 400px;
+  border-bottom-width: 10px;
+}
+
+.searchButton {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  border-width: 1px;
+  border-bottom-width: 10px;
+  border-color: #00bf63;
+}
+
+.search-button:hover {
+  background-color: #e5e5e5;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  margin-top: 50px;
+}
+header .shopping {
+  position: relative;
+  text-align: right;
+}
+header .shopping img {
+  width: 40px;
+}
+header .shopping span {
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  padding: 3px 10px;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 50px;
+}
+.list .item {
+  text-align: center;
+  background-color: #00bf63;
+  padding: 20px;
+  letter-spacing: 1px;
+  border-radius: 15px;
+}
+.list .item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.list .item .title {
+  font-weight: 600;
+}
+.list .item .price {
+  margin: 10px;
+}
+.list .item button {
+  background-color: darkgreen;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  border-style: none;
+}
+.card {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 500px;
+  background-color: #453e3b;
+  height: 100vh;
+  transition: 0.5s;
+}
+.active .card {
+  left: calc(100% - 500px);
+}
+.active .container {
+  transform: translateX(-200px);
+}
+.card h1 {
+  color: #e8bc0e;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.card .checkOut {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut div {
+  background-color: #e8bc0e;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.card .checkOut div:nth-child(2) {
+  background-color: #1c1f25;
+  color: #fff;
+}
+.listCard li {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: #fff;
+  row-gap: 10px;
+}
+.listCard li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listCard li img {
+  width: 90%;
+}
+.listCard li button {
+  background-color: #fff5;
+  border: none;
+}
+.listCard .count {
+  margin: 0 10px;
+}

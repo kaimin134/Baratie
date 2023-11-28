@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <nav>
+      <div class="logo">
+        <img src="image/logo.PNG" />
+        <a href="#">Baratie</a>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="nav-link">Table</a>
+        <a href="#" class="nav-link">Menu</a>
+        <a href="#" class="nav-link">Employee</a>
+      </div>
+    </nav>
+    <div class="container">
+      <header>
+        <h1>Menu</h1>
+        <div class="shopping">
+          <img src="image/shopping.svg" />
+          <span class="quantity">0</span>
+        </div>
+      </header>
+
+      <div class="searchContainer">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for a product"
+          oninput="searchProducts()"
+        />
+        <button class="searchButton">
+          <img
+            src="image/search.PNG"
+            alt="Search Icon"
+            width="20px"
+            height="20px"
+          />
+        </button>
+      </div>
+
+      <div class="list"></div>
+    </div>
+    <div class="card">
+      <h1>Card</h1>
+      <ul class="listCard"></ul>
+      <div class="checkOut">
+        <div class="total">0</div>
+        <div class="closeShopping">Close</div>
+      </div>
+    </div>
+
+    <script src="order.js"></script>
+  </body>
+</html>
