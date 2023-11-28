@@ -76,6 +76,11 @@ a:hover {
   border-bottom-width: 10px;
 }
 
+#searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(217, 255, 46);
+}
+
 .searchButton {
   background-color: #f1f1f1;
   padding: 10px;
@@ -146,6 +151,10 @@ header .shopping span {
   padding: 10px;
   border-radius: 15px;
   border-style: none;
+  cursor: pointer;
+}
+.list .item button:hover {
+  color: rgb(217, 255, 46);
 }
 .cart {
   position: fixed;
