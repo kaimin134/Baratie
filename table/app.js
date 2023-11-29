@@ -44,6 +44,7 @@ function initTables() {
     list.appendChild(table);
   }
 }
+initTables();
 
 function callBusboy(tableID) {
   currentTable = tableID;
@@ -121,8 +122,6 @@ function startTimer(timerId, seconds) {
   updateTimer(); // Update immediately to avoid a delay in the initial display
   let timerInterval = setInterval(updateTimer, 1000); // Update every second
 }
-
-initTables();
 
 let searchInput = document.getElementById("searchInput");
 
