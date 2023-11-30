@@ -40,7 +40,9 @@ function initTables() {
             <img src="image/table.PNG">
             </br>
             <div class="tableID">${i}</div>
+            <button class="orderButton" onclick="">Order</button>
             <button onclick="callBusboy(${i})">Call Busboy</button>`;
+
     list.appendChild(table);
   }
 }
