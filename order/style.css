@@ -201,25 +201,25 @@ header .shopping span {
   background-color: #1c1f25;
   color: #fff;
 }
-.listCart li {
+.cartList li {
   display: grid;
   grid-template-columns: 100px repeat(3, 1fr);
   color: #fff;
   row-gap: 10px;
 }
-.listCart li div {
+.cartList li div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.listCart li img {
+.cartList li img {
   width: 90%;
 }
-.listCart li button {
+.cartList li button {
   background-color: #fff5;
   border: none;
 }
-.listCart .count {
+.cartList .count {
   margin: 0 10px;
 }
 

@@ -274,7 +274,7 @@ header {
     width: 500px;
   }
 
-  .servers {
+  .employee {
     grid-template-columns: 1fr; /* Single column for mobile */
     margin-top: 20px; /* Adjust top margin */
   }
