@@ -120,7 +120,7 @@ function initServers() {
             <img src="image/server.PNG">
             <h2 class="name">${value.firstName} ${value.lastName}</h2>
             <p class="employeeID">Employee ID: ${value.employeeID.toLocaleString()}</p>
-            <button onclick="seeInfo(${value.employeeID})">Info</button>`;
+            <button onclick="seeInfo(${value.employeeID})">Get Info</button>`;
     servers.appendChild(server);
   });
 }
@@ -134,7 +134,7 @@ function initBartenders() {
             <img src="image/bartender.PNG">
             <h2 class="name">${value.firstName} ${value.lastName}</h2>
             <p class="employeeID">Employee ID: ${value.employeeID.toLocaleString()}</p>
-            <button onclick="seeInfo(${value.employeeID})">Info</button>`;
+            <button onclick="seeInfo(${value.employeeID})">Get Info</button>`;
     bartenders.appendChild(bartender);
   });
 }
@@ -148,7 +148,7 @@ function initBusboys() {
             <img src="image/busboy.PNG">
             <h2 class="name">${value.firstName} ${value.lastName}</h2>
             <p class="employeeID">Employee ID: ${value.employeeID.toLocaleString()}</p>
-            <button onclick="seeInfo(${value.employeeID})">Info</button>`;
+            <button onclick="seeInfo(${value.employeeID})">Get Info</button>`;
     busboys.appendChild(busboy);
   });
 }
