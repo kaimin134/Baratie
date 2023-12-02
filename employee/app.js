@@ -162,7 +162,7 @@ function initChefs() {
             <img src="image/chef.PNG">
             <h2 class="name">${value.firstName} ${value.lastName}</h2>
             <p class="employeeID">Employee ID: ${value.employeeID.toLocaleString()}</p>
-            <button onclick="seeInfo(${value.employeeID})">Info</button>`;
+            <button onclick="seeInfo(${value.employeeID})">Get Info</button>`;
     chefs.appendChild(chef);
   });
 }
