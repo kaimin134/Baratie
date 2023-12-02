@@ -1,4 +1,3 @@
-let openShopping = document.querySelector(".shopping");
 let closeShopping = document.querySelector(".closeShopping");
 let list = document.querySelector(".list");
 let busboy = document.querySelector(".busboy");
@@ -7,9 +6,6 @@ let total = document.querySelector(".total");
 let quantity = document.querySelector(".quantity");
 let currentTable = 0;
 
-openShopping.addEventListener("click", () => {
-  body.classList.add("active");
-});
 closeShopping.addEventListener("click", () => {
   body.classList.remove("active");
 });
@@ -40,7 +36,7 @@ function initTables() {
             <img src="image/table.PNG">
             </br>
             <div class="tableID">${i}</div>
-            <button class="orderButton" onclick="">Order</button>
+            <button class="orderButton" onclick="window.location='../order/index.html'">Order</button>
             <button onclick="callBusboy(${i})">Call Busboy</button>`;
 
     list.appendChild(table);

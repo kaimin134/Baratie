@@ -1,7 +1,7 @@
 let openShopping = document.querySelector(".shopping");
 let closeShopping = document.querySelector(".closeShopping");
 let list = document.querySelector(".list");
-let listCart = document.querySelector(".listCart");
+let cartList = document.querySelector(".cartList");
 let body = document.querySelector("body");
 let total = document.querySelector(".total");
 let quantity = document.querySelector(".quantity");
@@ -93,7 +93,7 @@ let products = [
     price: 4.5,
   },
 ];
-let listCarts = [];
+let cartListArray = [];
 function initApp() {
   products.forEach((value, key) => {
     let item = document.createElement("div");
@@ -140,18 +140,18 @@ function searchProducts() {
 searchProducts();
 
 function addToCart(key) {
-  if (listCarts[key] == null) {
+  if (cartListArray[key] == null) {
     // copy product form list to list Cart
-    listCarts[key] = JSON.parse(JSON.stringify(products[key]));
-    listCarts[key].quantity = 1;
+    cartListArray[key] = JSON.parse(JSON.stringify(products[key]));
+    cartListArray[key].quantity = 1;
   }
   reloadCart();
 }
 function reloadCart() {
-  listCart.innerHTML = "";
+  cartList.innerHTML = "";
   let count = 0;
   let totalPrice = 0;
-  listCarts.forEach((value, key) => {
+  cartListArray.forEach((value, key) => {
     totalPrice = totalPrice + value.price;
     count = count + value.quantity;
     if (value != null) {
@@ -169,7 +169,7 @@ function reloadCart() {
         value.quantity + 1
       })">+</button>
                 </div>`;
-      listCart.appendChild(newDiv);
+      cartList.appendChild(newDiv);
     }
   });
   total.innerText = "$" + totalPrice.toLocaleString();
@@ -177,10 +177,10 @@ function reloadCart() {
 }
 function changeQuantity(key, quantity) {
   if (quantity == 0) {
-    delete listCarts[key];
+    delete cartListArray[key];
   } else {
-    listCarts[key].quantity = quantity;
-    listCarts[key].price = quantity * products[key].price;
+    cartListArray[key].quantity = quantity;
+    cartListArray[key].price = quantity * products[key].price;
   }
   reloadCart();
 }

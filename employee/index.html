@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baratie</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="@sweetalert2/theme-bulma/bulma.css" />
   </head>
   <body class="">
     <nav>
@@ -21,19 +23,15 @@
     </nav>
     <div class="container">
       <header>
-        <h1>Menu</h1>
-        <div class="shopping">
-          <img src="image/shopping.svg" />
-          <span class="quantity">0</span>
-        </div>
+        <h1>Employee</h1>
       </header>
 
       <div class="searchContainer">
         <input
           type="text"
           id="searchInput"
-          placeholder="Search for an item"
-          oninput="searchProducts()"
+          placeholder="Search for an employee"
+          oninput="searchEmployee()"
         />
         <button class="searchButton">
           <img
@@ -45,17 +43,34 @@
         </button>
       </div>
 
-      <div class="list"></div>
+      <div class="list">
+        <h2>Server</h2>
+        <div class="servers"></div>
+        <br />
+        <br />
+        <h2>Bartender</h2>
+        <div class="bartenders"></div>
+        <br />
+        <br />
+        <h2>Busboy</h2>
+        <div class="busboys"></div>
+        <br />
+        <br />
+        <h2>Chef</h2>
+        <div class="chefs"></div>
+      </div>
     </div>
-    <div class="cart">
-      <h1>Cart</h1>
-      <ul class="cartList"></ul>
+    <div class="info">
+      <div class="infoList">
+        <h1>Info</h1>
+      </div>
       <div class="checkOut">
-        <div class="total">0</div>
+        <div class="earnings">Check Earnings</div>
         <div class="closeShopping">Close</div>
       </div>
     </div>
 
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>

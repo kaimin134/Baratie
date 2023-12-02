@@ -100,51 +100,48 @@ header {
   grid-template-columns: 1fr 50px;
   margin-top: 50px;
 }
-header .shopping {
-  position: relative;
-  text-align: right;
-}
-header .shopping img {
-  width: 40px;
-}
-header .shopping span {
-  background: red;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  position: absolute;
-  top: -5px;
-  left: 80%;
-  padding: 3px 10px;
-}
-.list {
+
+.servers,
+.bartenders,
+.chefs,
+.busboys {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
   row-gap: 20px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
-.list .item {
+.servers .employee,
+.bartenders .employee,
+.chefs .employee,
+.busboys .employee {
   text-align: center;
   background-color: #00bf63;
   padding: 20px;
   letter-spacing: 1px;
   border-radius: 15px;
 }
-.list .item img {
+.servers .employee img,
+.bartenders .employee img,
+.chefs .employee img,
+.busboys .employee img {
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
-.list .item .title {
+.servers .employee .employeeID,
+.bartenders .employee .employeeID,
+.chefs .employee .employeeID,
+.busboys .employee .employeeID {
   font-weight: 600;
-}
-.list .item .price {
   margin: 10px;
+  font-size: 25px;
 }
-.list .item button {
+
+.servers .employee button,
+.bartenders .employee button,
+.chefs .employee button,
+.busboys .employee button {
   background-color: darkgreen;
   color: #fff;
   width: 100%;
@@ -153,10 +150,34 @@ header .shopping span {
   border-style: none;
   cursor: pointer;
 }
-.list .item button:hover {
+.servers .employee button:hover,
+.bartenders .employee button:hover,
+.chefs .employee button:hover,
+.busboys .employee button:hover {
   color: rgb(217, 255, 46);
 }
-.cart {
+
+.servers .employee .orderButton,
+.bartenders .employee .orderButton,
+.chefs .employee .orderButton,
+.busboys .employee .orderButton {
+  background-color: #e8bc0e;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  border-style: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.servers .employee .orderButton:hover,
+.bartenders .employee .orderButton:hover,
+.chefs .employee .orderButton:hover,
+.busboys .employee .orderButton:hover {
+  color: rgb(217, 255, 46);
+}
+
+.info {
   position: fixed;
   top: 0;
   left: 100%;
@@ -165,29 +186,34 @@ header .shopping span {
   height: 100vh;
   transition: 0.5s;
 }
-.active .cart {
+
+.active .info {
   left: calc(100% - 500px);
 }
 .active .container {
   transform: translateX(-200px);
 }
-.cart h1 {
+.info h1 {
   color: #e8bc0e;
-  font-weight: 100;
-  margin: 0;
-  padding: 0 20px;
-  height: 80px;
-  display: flex;
-  align-items: center;
+  font-weight: 200;
+  margin: 20px 20px 40px 20px;
+  font-size: 50px;
 }
-.cart .checkOut {
+.info p {
+  color: white;
+  font-weight: 300;
+  padding-left: 40px;
+  font-size: 25px;
+}
+
+.info .checkOut {
   position: absolute;
   bottom: 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.cart .checkOut div {
+.info .checkOut div {
   background-color: #e8bc0e;
   width: 100%;
   height: 70px;
@@ -197,30 +223,30 @@ header .shopping span {
   font-weight: bold;
   cursor: pointer;
 }
-.cart .checkOut div:nth-child(2) {
+.info .checkOut div:nth-child(2) {
   background-color: #1c1f25;
   color: #fff;
 }
-.cartList li {
-  display: grid;
-  grid-template-columns: 100px repeat(3, 1fr);
-  color: #fff;
-  row-gap: 10px;
-}
-.cartList li div {
+
+.info .workedHours {
+  background-color: darkgoldenrod;
+  border-radius: 15px;
+  text-align: center;
+  height: 60px;
+  margin: 40px 30px 30px 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  padding-left: 0;
 }
-.cartList li img {
-  width: 90%;
+
+#workedHours {
+  margin-left: 5px;
 }
-.cartList li button {
-  background-color: #fff5;
-  border: none;
-}
-.cartList .count {
-  margin: 0 10px;
+
+.info button:hover {
+  color: rgb(217, 255, 46);
 }
 
 @media only screen and (max-width: 600px) {
@@ -248,7 +274,7 @@ header .shopping span {
     width: 500px;
   }
 
-  .list {
+  .employee {
     grid-template-columns: 1fr; /* Single column for mobile */
     margin-top: 20px; /* Adjust top margin */
   }
