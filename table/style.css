@@ -43,7 +43,7 @@ nav img {
 
 a {
   text-decoration: none;
-  color: black;
+  color: darkgreen;
   padding: 15px;
   position: relative;
   top: 20px;
@@ -142,6 +142,7 @@ header .shopping span {
   font-weight: 600;
   margin: 10px;
   font-size: 25px;
+  color: darkred;
 }
 
 .list .table button {
