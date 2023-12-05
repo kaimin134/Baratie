@@ -138,7 +138,12 @@ header {
   margin: 10px;
   font-size: 25px;
 }
-
+.servers .employee .name,
+.bartenders .employee .name,
+.chefs .employee .name,
+.busboys .employee .name {
+  color: #1c1f25;
+}
 .servers .employee button,
 .bartenders .employee button,
 .chefs .employee button,
