@@ -169,6 +169,18 @@ function initChefs() {
 initChefs();
 
 function seeInfo(employeeID) {
+  // Check if the body has the "active" class, indicating that the Info sidebar is open
+  if (body.classList.contains("active")) {
+    // If open, close the sidebar and then open the new one
+    body.classList.remove("active");
+    setTimeout(() => openInfo(employeeID), 500); // Delay the opening to allow the closing animation
+  } else {
+    // If not open, directly open the new sidebar
+    openInfo(employeeID);
+  }
+}
+
+function openInfo(employeeID) {
   body.classList.add("active");
   initInfo(employeeID);
 }
