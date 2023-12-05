@@ -280,8 +280,15 @@ header {
     width: 500px;
   }
 
-  .employee {
-    grid-template-columns: 1fr; /* Single column for mobile */
-    margin-top: 20px; /* Adjust top margin */
+  .servers,
+  .bartenders,
+  .busboys,
+  .chefs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info {
+    width: 100vw;
   }
 }
