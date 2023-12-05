@@ -140,8 +140,11 @@ function searchProducts() {
 searchProducts();
 
 function addToCart(key) {
-  if (cartListArray[key] == null) {
-    // copy product form list to list Cart
+  if (cartListArray[key]) {
+    // If the item is already in the cart, increase its quantity
+    cartListArray[key].quantity += 1;
+  } else {
+    // If the item is not in the cart, copy it from the products list
     cartListArray[key] = JSON.parse(JSON.stringify(products[key]));
     cartListArray[key].quantity = 1;
   }
@@ -182,5 +185,38 @@ function changeQuantity(key, quantity) {
     cartListArray[key].quantity = quantity;
     cartListArray[key].price = quantity * products[key].price;
   }
+  reloadCart();
+}
+
+function handleCashPayment() {
+  let amountGiven = prompt("Enter the amount customer gives:");
+
+  if (amountGiven) {
+    let changeAmount = calculateChange(amountGiven);
+    alert(`Change amount: $${changeAmount.toLocaleString()}`);
+    resetTotal();
+  }
+}
+
+function handleCreditCardPayment() {
+  resetTotal();
+}
+
+function calculateChange(amountGiven) {
+  let totalAmount = parseFloat(
+    total.innerText.replace("$", "").replace(/,/g, "")
+  );
+  let amountGivenFloat = parseFloat(amountGiven);
+
+  if (!isNaN(amountGivenFloat)) {
+    return amountGivenFloat - totalAmount;
+  } else {
+    alert("Invalid amount. Please enter a valid number.");
+    return 0;
+  }
+}
+
+function resetTotal() {
+  cartListArray = [];
   reloadCart();
 }

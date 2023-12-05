@@ -1,5 +1,5 @@
 body {
-  background-color: #e3e7e8;
+  background-color: #c7ffb8;
   font-family: system-ui;
 }
 
@@ -197,15 +197,31 @@ header .shopping span {
   font-weight: bold;
   cursor: pointer;
 }
+.cart .checkOut div:nth-child(1) {
+  cursor: default;
+}
 .cart .checkOut div:nth-child(2) {
   background-color: #1c1f25;
   color: #fff;
+}
+.cart .checkOut div:nth-child(3) {
+  background-color: #00bf63;
+  color: #1c1f25;
+}
+.cart .checkOut div:nth-child(4) {
+  background-color: darkgreen;
+  color: #fff;
+}
+.cartList {
+  max-height: 70vh; /* Adjust the height according to your design */
+  overflow-y: scroll;
+  padding: 10px; /* Add padding for a better visual appearance */
 }
 .cartList li {
   display: grid;
   grid-template-columns: 100px repeat(3, 1fr);
   color: #fff;
-  row-gap: 10px;
+  row-gap: 12px;
 }
 .cartList li div {
   display: flex;
