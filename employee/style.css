@@ -287,8 +287,4 @@ header {
     display: flex;
     flex-direction: column;
   }
-
-  .info {
-    width: 100vw;
-  }
 }
