@@ -178,7 +178,7 @@ header .shopping span {
   left: 100%;
   width: 500px;
   background-color: #453e3b;
-  min-height: -webkit-fill-available;
+  height: 100vh;
   transition: 0.5s;
 }
 
@@ -264,18 +264,14 @@ header .shopping span {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    margin: 0;
-  }
   nav {
-    width: 480px;
+    width: 500px;
   }
 
   a {
     padding: 10px; /* Reduce padding for smaller screens */
     top: 20px; /* Adjust top spacing */
     font-size: 20px; /* Adjust font size for mobile */
-    margin-left: 5px;
   }
 
   .nav-links {
@@ -289,17 +285,11 @@ header .shopping span {
   }
 
   .container {
-    width: 480px;
-  }
-
-  .table {
-    width: 400px;
+    width: 500px;
   }
 
   .list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* Single column for mobile */
     margin-top: 20px; /* Adjust top margin */
   }
 }

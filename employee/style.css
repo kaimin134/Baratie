@@ -189,7 +189,7 @@ header {
   left: 100%;
   width: 500px;
   background-color: #453e3b;
-  min-height: -webkit-fill-available;
+  height: 100vh;
   transition: 0.5s;
 }
 
@@ -264,7 +264,6 @@ header {
     padding: 10px; /* Reduce padding for smaller screens */
     top: 20px; /* Adjust top spacing */
     font-size: 20px; /* Adjust font size for mobile */
-    margin-left: 5px;
   }
 
   .nav-links {
@@ -281,13 +280,8 @@ header {
     width: 500px;
   }
 
-  .servers,
-  .bartenders,
-  .busboys,
-  .chefs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .employee {
+    grid-template-columns: 1fr; /* Single column for mobile */
     margin-top: 20px; /* Adjust top margin */
   }
 }
