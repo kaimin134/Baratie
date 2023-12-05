@@ -122,9 +122,6 @@ header {
   letter-spacing: 1px;
   border-radius: 15px;
 }
-h2.name {
-  color: #1c1f25;
-}
 .servers .employee img,
 .bartenders .employee img,
 .chefs .employee img,
