@@ -176,9 +176,9 @@ function toggle(allergic) {
   const wheatIndices = [2, 6];
   const soyIndices = [4, 6];
   const dairyIndices = [3, 5];
-  const eggIndices = [2, 5];
+  const eggIndices = [2, 6];
   const sesameIndices = [4];
-  const peanutIndices = [0, 5];
+  const peanutIndices = [0, 6];
 
   switch (allergic) {
     case "shellfish":
