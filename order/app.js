@@ -139,6 +139,108 @@ function searchProducts() {
 // Call the searchProducts function on page load to display all products initially
 searchProducts();
 
+function toggleShellfishButton() {
+  let shellfishButton = document.getElementById("shellfishButton");
+  let shellfishItemIndex = products.findIndex(
+    (product) => product.name === "Sushi Platter"
+  );
+  let shellfishItem =
+    document.querySelector(".list").children[shellfishItemIndex];
+
+  if (shellfishButton.classList.contains("selected")) {
+    // Unselect the button
+    shellfishButton.classList.remove("selected");
+    shellfishItem.style.backgroundColor = ""; // Set to the original color or remove the style
+  } else {
+    // Select the button
+    shellfishButton.classList.add("selected");
+    shellfishItem.style.backgroundColor = "red"; // Set the background color to red
+  }
+}
+let isShellfishSelected = false;
+let isFishSelected = false;
+let isWheatSelected = false;
+let isSoySelected = false;
+let isDairySelected = false;
+let isEggSelected = false;
+let isSesameSelected = false;
+let isPeanutSelected = false;
+
+function toggle(allergic) {
+  let allergicButton = document.getElementById(`${allergic}Button`);
+  // Get the indices of the items related to sushi
+  let isAllergySelected = false;
+  let indices = [];
+  const shellfishIndices = [0, 2, 4];
+  const fishIndices = [0, 1, 4];
+  const wheatIndices = [2, 6];
+  const soyIndices = [4, 6];
+  const dairyIndices = [3, 5];
+  const eggIndices = [2, 5];
+  const sesameIndices = [4];
+  const peanutIndices = [0, 5];
+
+  switch (allergic) {
+    case "shellfish":
+      indices = shellfishIndices;
+      isShellfishSelected = !isShellfishSelected;
+      isAllergySelected = isShellfishSelected;
+      break;
+    case "fish":
+      indices = fishIndices;
+      isFishSelected = !isFishSelected;
+      isAllergySelected = isFishSelected;
+      break;
+    case "wheat":
+      indices = wheatIndices;
+      isWheatSelected = !isWheatSelected;
+      isAllergySelected = isWheatSelected;
+      break;
+    case "soy":
+      indices = soyIndices;
+      isSoySelected = !isSoySelected;
+      isAllergySelected = isSoySelected;
+      break;
+    case "dairy":
+      indices = dairyIndices;
+      isDairySelected = !isDairySelected;
+      isAllergySelected = isDairySelected;
+      break;
+    case "egg":
+      indices = eggIndices;
+      isEggSelected = !isEggSelected;
+      isAllergySelected = isEggSelected;
+      break;
+    case "sesame":
+      indices = sesameIndices;
+      isSesameSelected = !isSesameSelected;
+      isAllergySelected = isSesameSelected;
+
+      break;
+    case "peanut":
+      indices = peanutIndices;
+      isPeanutSelected = !isPeanutSelected;
+      isAllergySelected = isPeanutSelected;
+      break;
+    default:
+      indices = [];
+  }
+  // Toggle background color for each sushi item
+  indices.forEach((index) => {
+    const item = document.querySelector(`.item:nth-child(${index + 1})`);
+    const button = item.querySelector("button");
+    if (isAllergySelected) {
+      allergicButton.classList.add("selected");
+      item.style.backgroundColor = "red";
+      button.style.backgroundColor = "darkred";
+    } else {
+      allergicButton.classList.remove("selected");
+      item.style.backgroundColor = ""; // Reset to the original color
+      button.style.backgroundColor = ""; // Reset button color
+    }
+  });
+}
+
 function addToCart(key) {
   if (cartListArray[key]) {
     // If the item is already in the cart, increase its quantity
