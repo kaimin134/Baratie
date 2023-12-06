@@ -224,7 +224,7 @@ function initInfo(employeeID) {
 }
 
 function checkEarnings(employeeID, workedHours) {
-  let employee = serverList.find((x) => x.employeeID == employeeID);
+  let employee = employeeList.find((x) => x.employeeID == employeeID);
   let wage = 7.25; // Change this to the actual wage
 
   // Calculate earnings
