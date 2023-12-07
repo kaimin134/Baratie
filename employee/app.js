@@ -13,26 +13,51 @@ let serverList = [
     firstName: "Theresa",
     lastName: "Wright",
     employeeID: "1653",
+    email: "khoward@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
   {
     firstName: "Bryan",
     lastName: "Kim",
     employeeID: "3350",
+    email: "vnzcvngn@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 13,
   },
   {
     firstName: "Alexandra",
     lastName: "Ramirez",
     employeeID: "5373",
+    email: "nzdfbv@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
   {
     firstName: "Mary",
     lastName: "Mejia",
     employeeID: "5501",
+    email: "zfdnzv@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 13,
   },
   {
     firstName: "Gabriella",
     lastName: "White",
     employeeID: "7912",
+    email: "zvnzcv@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 12,
   },
 ];
 
@@ -41,16 +66,31 @@ let bartenderList = [
     firstName: "Leroy",
     lastName: "Lewis",
     employeeID: "7208",
+    email: "zcvbznf@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 13,
   },
   {
     firstName: "Mark",
     lastName: "Farmer",
     employeeID: "7310",
+    email: "vcznvcng@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 14,
   },
   {
     firstName: "Kimberly",
     lastName: "Kirk",
     employeeID: "8615",
+    email: "nzvnzn@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
 ];
 
@@ -59,36 +99,71 @@ let chefList = [
     firstName: "Anthony",
     lastName: "Moran",
     employeeID: "1405",
+    email: "vnzcxnvcz@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
   {
     firstName: "Dawn",
     lastName: "Pittman",
     employeeID: "4872",
+    email: "vczxbnzhfd@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 12,
   },
   {
     firstName: "Jodi",
     lastName: "Benson",
     employeeID: "6528",
+    email: "ndhfdbxh@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 14,
   },
   {
     firstName: "Gary",
     lastName: "Hill",
     employeeID: "7283",
+    email: "nccfbcb@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
   {
     firstName: "Rachel",
     lastName: "Ibarra",
     employeeID: "8555",
+    email: "nsFxzvC@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
   {
     firstName: "Bryce",
     lastName: "Pham",
     employeeID: "8739",
+    email: "bvctd@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
   {
     firstName: "Christopher",
     lastName: "Buck",
     employeeID: "8894",
+    email: "jfadfg@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 15,
   },
 ];
 
@@ -97,16 +172,31 @@ let busboyList = [
     firstName: "Donald",
     lastName: "Trujillo",
     employeeID: "3324",
+    email: "hsdfhsdfh@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 12,
   },
   {
     firstName: "Barbara",
     lastName: "Le",
     employeeID: "3385",
+    email: "rayhfdh@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 12,
   },
   {
     firstName: "Jessica",
     lastName: "David",
     employeeID: "4470",
+    email: "hafhdhfadh@example.org",
+    dob: "1996-10-25",
+    hireDate: "2020-03-19",
+    phoneNumber: "4532995438",
+    wage: 13,
   },
 ];
 
@@ -206,10 +296,11 @@ function initInfo(employeeID) {
   infoList.innerHTML = `
     <h1>Employee Info</h1>
     <p>Full Name: ${employee.firstName} ${employee.lastName}</p>
-    <p>Phone Number: ${employee.firstName} ${employee.lastName}</p>
-    <p>Email Address: ${employee.firstName} ${employee.lastName}</p>
-    <p>Hire Date: ${employee.firstName} ${employee.lastName}</p>
-    <p>Wage: $7.25</p>
+    <p>Phone Number: ${employee.phoneNumber}</p>
+    <p>Email Address: ${employee.email}</p>
+    <p>Date of Birth: ${employee.dob}</p>
+    <p>Hire Date: ${employee.hireDate} </p>
+    <p>Wage: $${employee.wage} per hour</p>
     <p class="workedHours">Worked Hours: <span id="workedHours">${workedHours}h ${minutes}m ${seconds}s</span></p>
   `;
 
@@ -225,7 +316,7 @@ function initInfo(employeeID) {
 
 function checkEarnings(employeeID, workedHours) {
   let employee = employeeList.find((x) => x.employeeID == employeeID);
-  let wage = 7.25; // Change this to the actual wage
+  let wage = employee.wage; // Change this to the actual wage
 
   // Calculate earnings
   let earnings = wage * workedHours;

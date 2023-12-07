@@ -78,7 +78,6 @@ function initBusboys() {
     startTimer(timerId, 10); // 10 seconds
   });
 }
-
 // Function to move a busboy from available to unavailable list
 function moveToUnavailable(index) {
   let selectedBusboy = availableBusboyList[index];
@@ -136,6 +135,3 @@ function searchTable() {
     }
   });
 }
-
-// Call the searchProducts function on page load to display all products initially
-searchTable();
